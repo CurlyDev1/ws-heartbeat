@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket with Heartbeat</title>
+</head>
+<body>
+    <h1>WebSocket with Heartbeat</h1>
+    <div id="status"></div>
+
+    <script>
+        const HEARTBEAT_INTERVAL = 3000; // 3 seconds
+        //Should reconnect after a cooling off period
+        //Shouldn't send a heartbeat message if the websocket has been closed
+        
+        const connect = () => {
+            const ws = new WebSocket(`ws://${window.location.host}`);
+            const status = document.getElementById('status');
+
+        };
+
+        connect();
+    </script>
+</body>
+</html>
