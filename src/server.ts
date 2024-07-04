@@ -1,6 +1,6 @@
 /**
- * This server starts a websocket server on port as well as serving a simple html page on port 3000
- * the page is accessible at http://localhost:3000/public/index.html
+ * This server starts a websocket server as well as serving a simple html page on port 3000
+ * the web page is accessible at http://localhost:3000/public/index.html
  *
  * Implement hearbeat functionality on the websocket server and display whether it is connected in the div with the id "status"
  */
@@ -24,7 +24,7 @@ interface ExtWebSocket extends WebSocket {
   isAlive?: boolean;
 }
 
-const heartbeat = function (this: ExtWebSocket, args: any[]) {
+const heartbeat = function (this: ExtWebSocket, ...args: any[]) {
   this.isAlive = true;
 };
 
